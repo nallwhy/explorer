@@ -171,7 +171,9 @@ defmodule Explorer.PolarsBackend.Series do
   def add(%Series{} = left, %Series{} = right),
     do: Shared.apply_series(left, :s_add, [right.data])
 
-  def add(left, right) when is_number(right), do: add(left, scalar_rhs(right, left))
+  def add(left, right) when is_number(right),
+    do: Shared.apply_series(left, :s_add_number, [right])
+
   def add(left, right) when is_number(left), do: add(scalar_rhs(left, right), right)
 
   @impl true

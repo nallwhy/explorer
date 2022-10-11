@@ -129,6 +129,7 @@ defmodule Explorer.PolarsBackend.Native do
 
   # Series
   def s_add(_s, _other), do: err()
+  def s_add_number(_s, _number), do: err()
   def s_and(_s, _s2), do: err()
   def s_append(_s, _other), do: err()
   def s_argsort(_s, _reverse), do: err()
