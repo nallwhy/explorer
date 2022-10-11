@@ -187,6 +187,7 @@ rustler::init!(
         lf_tail,
         // series
         s_add,
+        s_add_number,
         s_and,
         s_append,
         s_argsort,

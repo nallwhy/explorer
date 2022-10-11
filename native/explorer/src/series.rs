@@ -119,6 +119,13 @@ pub fn s_add(data: ExSeries, other: ExSeries) -> Result<ExSeries, ExplorerError>
 }
 
 #[rustler::nif(schedule = "DirtyCpu")]
+pub fn s_add_number(data: ExSeries, number: i64) -> Result<ExSeries, ExplorerError> {
+    let s: &Series = &data.resource.0;
+    let s1: Series = Series::new("", &[number]);
+    Ok(ExSeries::new(s + &s1))
+}
+
+#[rustler::nif(schedule = "DirtyCpu")]
 pub fn s_sub(data: ExSeries, other: ExSeries) -> Result<ExSeries, ExplorerError> {
     let s = &data.resource.0;
     let s1 = &other.resource.0;
