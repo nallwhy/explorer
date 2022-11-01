@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.29.0">
+    <meta name="project" content="Explorer v0.4.0-dev">
+
+    <title>Changelog — Explorer v0.4.0-dev</title>
+    <link rel="stylesheet" href="dist/html-elixir-2YOS5DIE.css" />
+
+    <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
+    <script src="dist/handlebars.templates-X7YVL3G2.js"></script>
+    <script src="dist/sidebar_items-73D13083.js"></script>
+
+      <script src="docs_config.js"></script>
+
+    <script async src="dist/html-XN2TSG4M.js"></script>
+
+
+  </head>
+  <body data-type="extras" class="page-extra">
+    <script>
+
+      try {
+        var settings = JSON.parse(localStorage.getItem('ex_doc:settings') || '{}');
+
+        if (settings.theme === 'dark' ||
+           ((settings.theme === 'system' || settings.theme == null) &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches)
+           ) {
+          document.body.classList.add('dark')
+        }
+      } catch (error) { }
+    </script>
+
+<div class="main">
+
+<button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
+  <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+</button>
+
+<section class="sidebar">
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <i class="ri-search-2-line" aria-hidden="true" title="Submit search"></i>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <i class="ri-close-line ri-lg" aria-hidden="true" title="Cancel search"></i>
+    </button>
+    <label class="search-label">
+      <p class="sr-only">Search</p>
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
+
+      <a href="Explorer.html">
+        <img src="assets/logo.png" alt="Explorer" class="sidebar-projectImage">
+      </a>
+
+    <div class="sidebar-projectDetails">
+      <a href="Explorer.html" class="sidebar-projectName" translate="no">
+Explorer
+      </a>
+      <strong class="sidebar-projectVersion" translate="no">
+        v0.4.0-dev
+      </strong>
+    </div>
+    <ul class="sidebar-listNav">
+      <li><a id="extras-list-link" href="#full-list">Pages</a></li>
+
+        <li><a id="modules-list-link" href="#full-list">Modules</a></li>
+
+
+    </ul>
+  </div>
+
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <output role="status" id="toast"></output>
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+<h1>
+<button class="settings display-settings">
+  <i class="ri-settings-3-line"></i>
+  <span class="sr-only">Settings</span>
+</button>
+
+
+    <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/CHANGELOG.md#L1" title="View Source" class="view-source" rel="help">
+      <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+      <span class="sr-only">View Source</span>
+    </a>
+
+  <span>Changelog</span>
+</h1>
+
+<p>All notable changes to this project will be documented in this file.</p><p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>,
+and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p><h2 id="0-3-1-2022-09-09" class="section-heading">
+  <a href="#0-3-1-2022-09-09" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">0-3-1-2022-09-09</p>
+  </a>
+  [0.3.1] - 2022-09-09
+</h2>
+<h3 id="fixed" class="section-heading">
+  <a href="#fixed" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">fixed</p>
+  </a>
+  Fixed
+</h3>
+<ul><li>Define <code class="inline">multiply</code> inside <code class="inline">*_with</code> operations.</li><li>Fix column types in several operations, such as <code class="inline">n_distinct</code>.</li></ul><h2 id="v0-3-0-2022-09-01" class="section-heading">
+  <a href="#v0-3-0-2022-09-01" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">v0-3-0-2022-09-01</p>
+  </a>
+  [v0.3.0] - 2022-09-01
+</h2>
+<h3 id="added" class="section-heading">
+  <a href="#added" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">added</p>
+  </a>
+  Added
+</h3>
+<ul><li><p>Add <code class="inline">DataFrame.concat_columns/1</code> and <code class="inline">DataFrame.concat_columns/2</code> for horizontally stacking
+dataframes.</p></li><li><p>Add compression as an option to write parquet files.</p></li><li><p>Add count metadata to <code class="inline">DataFrame</code> table reader.</p></li><li><p>Add <code class="inline">DataFrame.filter_with/2</code>, <code class="inline">DataFrame.summarise_with/2</code>, <code class="inline">DataFrame.mutate_with/2</code> and
+<code class="inline">DataFrame.arrange_with/2</code>. They all accept a <code class="inline">DataFrame</code> and a function, and they all work with
+a new concept called &quot;lazy series&quot;.</p><p>Lazy Series is an opaque representation of a series that can be
+used to perform complex operations without pulling data from the series. This is faster than
+using masks. There is no big difference from the API perspective compared to the functions that were
+accepting callbacks before (eg. <code class="inline">filter/2</code> and the new <code class="inline">filter_with/2</code>), with the exception being
+<code class="inline">DataFrame.summarise_with/2</code> that now accepts a lot more operations.</p></li></ul><h3 id="changed" class="section-heading">
+  <a href="#changed" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">changed</p>
+  </a>
+  Changed
+</h3>
+<ul><li>Bump version requirement of the <code class="inline">table</code> dependency to <code class="inline">~&gt; 0.1.2</code>, and raise for non-tabular values.</li><li>Normalize how columns are handled. This changes some functions to accept one column or
+a list of columns, ranges, indexes and callbacks selecting columns.</li><li>Rename <code class="inline">DataFrame.filter/2</code> to <code class="inline">DataFrame.mask/2</code>.</li><li>Rename <code class="inline">Series.filter/2</code> to <code class="inline">Series.mask/2</code>.</li><li>Rename <code class="inline">take/2</code> from both <code class="inline">Series</code> and <code class="inline">DataFrame</code> to <code class="inline">slice/2</code>. <code class="inline">slice/2</code> now they accept ranges as well.</li><li>Raise an error if <code class="inline">DataFrame.pivot_wider/4</code> has float columns as IDs. This is because we can´t
+properly compare floats.</li><li>Change <code class="inline">DataFrame.distinct/2</code> to accept columns as argument instead of receiving it as option.</li></ul><h3 id="fixed-1" class="section-heading">
+  <a href="#fixed-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">fixed-1</p>
+  </a>
+  Fixed
+</h3>
+<ul><li>Ensure that we can compare boolean series in functions like <code class="inline">Series.equal/2</code>.</li><li>Fix rename of columns after summarise.</li><li>Fix inspect of float series containing <code class="inline">NaN</code> or <code class="inline">Infinity</code> values. They are represented as atoms.</li></ul><h3 id="deprecated" class="section-heading">
+  <a href="#deprecated" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">deprecated</p>
+  </a>
+  Deprecated
+</h3>
+<ul><li>Deprecate <code class="inline">DataFrame.filter/2</code> with a callback in favor of <code class="inline">DataFrame.filter_with/2</code>.</li></ul><h2 id="v0-2-0-2022-06-22" class="section-heading">
+  <a href="#v0-2-0-2022-06-22" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">v0-2-0-2022-06-22</p>
+  </a>
+  <a href="https://github.com/elixir-nx/explorer/compare/v0.1.1...v0.2.0" title="">v0.2.0</a> - 2022-06-22
+</h2>
+<h3 id="added-1" class="section-heading">
+  <a href="#added-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">added-1</p>
+  </a>
+  Added
+</h3>
+<ul><li>Consistently support ranges throughout the columns API</li><li>Support negative indexes throughout the columns API</li><li>Integrate with the <code class="inline">table</code> package</li><li>Add <code class="inline">Series.to_enum/1</code> for lazily traversing the series</li><li>Add <code class="inline">Series.coalesce/1</code> and <code class="inline">Series.coalesce/2</code> for finding the first non-null value in a list of series</li></ul><h3 id="changed-1" class="section-heading">
+  <a href="#changed-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">changed-1</p>
+  </a>
+  Changed
+</h3>
+<ul><li><code class="inline">Series.length/1</code> is now <code class="inline">Series.size/1</code> in keeping with Elixir idioms</li><li><a href="https://hexdocs.pm/nx/0.3.0/Nx.html"><code class="inline">Nx</code></a> is now an optional dependency</li><li>Minimum Elixir version is now 1.13</li><li><code class="inline">DataFrame.to_map/2</code> is now <code class="inline">DataFrame.to_columns/2</code> and <code class="inline">DataFrame.to_series/2</code></li><li><a href="https://hexdocs.pm/rustler/0.26.0/Rustler.html"><code class="inline">Rustler</code></a> is now an optional dependency</li><li><code class="inline">read_</code> and <code class="inline">write_</code> IO functions are now <code class="inline">from_</code> and <code class="inline">to_</code></li><li><code class="inline">to_binary</code> is now <code class="inline">dump_csv</code></li><li>Now uses <code class="inline">polars</code>'s &quot;simd&quot; feature</li><li>Now uses <code class="inline">polars</code>'s &quot;performant&quot; feature</li><li><code class="inline">Explorer.default_backend/0</code> is now <a href="Explorer.Backend.html#get/0"><code class="inline">Explorer.Backend.get/0</code></a></li><li><code class="inline">Explorer.default_backend/1</code> is now <a href="Explorer.Backend.html#put/1"><code class="inline">Explorer.Backend.put/1</code></a></li><li><code class="inline">Series.cum_*</code> functions are now <code class="inline">Series.cumulative_*</code> to mirror <a href="https://hexdocs.pm/nx/0.3.0/Nx.html"><code class="inline">Nx</code></a></li><li><code class="inline">Series.rolling_*</code> functions are now <code class="inline">Series.window_*</code> to mirror <a href="https://hexdocs.pm/nx/0.3.0/Nx.html"><code class="inline">Nx</code></a></li><li><code class="inline">reverse?</code> is now an option instead of an argument in <code class="inline">Series.cumulative_*</code> functions</li><li><code class="inline">DataFrame.from_columns/2</code> and <code class="inline">DataFrame.from_rows/2</code> is now <code class="inline">DataFrame.new/2</code></li><li>Rename &quot;col&quot; to &quot;column&quot; throughout the API</li><li>Remove &quot;with_&quot; prefix in options throughout the API</li><li><code class="inline">DataFrame.table/2</code> accepts options with <code class="inline">:limit</code> instead of single integer</li><li><code class="inline">rename/2</code> no longer accepts a function, use <code class="inline">rename_with/2</code> instead</li><li><code class="inline">rename_with/3</code> now expects the function as the last argument</li></ul><h3 id="fixed-2" class="section-heading">
+  <a href="#fixed-2" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">fixed-2</p>
+  </a>
+  Fixed
+</h3>
+<ul><li>Explorer now works on Linux with musl</li></ul><h2 id="v0-1-1-2022-04-27" class="section-heading">
+  <a href="#v0-1-1-2022-04-27" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">v0-1-1-2022-04-27</p>
+  </a>
+  <a href="https://github.com/elixir-nx/explorer/compare/v0.1.0...v0.1.1" title="">v0.1.1</a> - 2022-04-27
+</h2>
+<h3 id="security" class="section-heading">
+  <a href="#security" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">security</p>
+  </a>
+  Security
+</h3>
+<ul><li>Updated Rust dependencies to address Dependabot security alerts: <a href="https://github.com/elixir-nx/explorer/security/dependabot/1">1</a>, <a href="https://github.com/elixir-nx/explorer/security/dependabot/3">2</a>, <a href="https://github.com/elixir-nx/explorer/security/dependabot/4">3</a></li></ul><h2 id="v0-1-0-2022-04-26" class="section-heading">
+  <a href="#v0-1-0-2022-04-26" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">v0-1-0-2022-04-26</p>
+  </a>
+  <a href="https://github.com/elixir-nx/explorer/releases/tag/v0.1.0" title="">v0.1.0</a> - 2022-04-26
+</h2>
+<p>First release.</p>
+<div class="bottom-actions">
+  <div class="bottom-actions-item">
+
+      <a href="exploring_explorer.html" class="bottom-actions-button" rel="prev">
+        <span class="subheader">
+          ← Previous Page
+        </span>
+        <span class="title">
+Ten Minutes to Explorer
+        </span>
+      </a>
+
+  </div>
+  <div class="bottom-actions-item">
+
+  </div>
+</div>
+      <footer class="footer">
+
+          <p>
+            On Hex.pm:
+
+            <span class="line">
+              <a href="https://hex.pm/packages/explorer/0.4.0-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/explorer/0.4.0-dev" class="line">Preview</a>
+
+                <a href="https://preview.hex.pm/preview/explorer/0.4.0-dev/show/CHANGELOG.md">(current file)</a>
+
+            </span>
+
+            <button class="a-main line footer-button display-quick-switch">
+              Search
+            </button>
+          </p>
+
+        <p>
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.0) for the
+
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+
+
+  </body>
+</html>
