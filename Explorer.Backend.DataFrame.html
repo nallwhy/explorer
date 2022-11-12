@@ -12,7 +12,7 @@
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-X7YVL3G2.js"></script>
-    <script src="dist/sidebar_items-73D13083.js"></script>
+    <script src="dist/sidebar_items-E25FB650.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -250,7 +250,7 @@ Explorer
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#c:concat_columns/1" translate="no">concat_columns(list)</a>
+          <a href="#c:concat_columns/2" translate="no">concat_columns(list, out_df)</a>
 
         </div>
 
@@ -258,7 +258,7 @@ Explorer
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#c:concat_rows/1" translate="no">concat_rows(list)</a>
+          <a href="#c:concat_rows/2" translate="no">concat_rows(list, out_df)</a>
 
         </div>
 
@@ -282,7 +282,7 @@ Explorer
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#c:dummies/2" translate="no">dummies(df, columns)</a>
+          <a href="#c:dummies/3" translate="no">dummies(df, out_df, columns)</a>
 
         </div>
 
@@ -446,7 +446,7 @@ Explorer
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#c:pivot_wider/5" translate="no">pivot_wider(df, id_columns, names_from, values_from, names_prefix)</a>
+          <a href="#c:pivot_wider/6" translate="no">pivot_wider(df, out_df, id_columns, names_from, values_from, names_prefix)</a>
 
         </div>
 
@@ -470,7 +470,7 @@ Explorer
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#c:sample/4" translate="no">sample(df, n, replacement, seed)</a>
+          <a href="#c:sample/4" translate="no">sample(df, n_or_frac, replacement, seed)</a>
 
         </div>
 
@@ -1026,42 +1026,14 @@ Callbacks
 
   </section>
 </section>
-<section class="detail" id="c:concat_columns/1">
+<section class="detail" id="c:concat_columns/2">
 
   <div class="detail-header">
-    <a href="#c:concat_columns/1" class="detail-link" title="Link to this callback">
+    <a href="#c:concat_columns/2" class="detail-link" title="Link to this callback">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this callback</span>
     </a>
-    <h1 class="signature" translate="no">concat_columns(list)</h1>
-
-      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/backend/data_frame.ex#L137" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-      <div class="specs">
-
-          <pre translate="no"><span class="attribute">@callback</span> concat_columns([<a href="#t:df/0">df</a>()]) :: <a href="#t:df/0">df</a>()</pre>
-
-      </div>
-
-
-  </section>
-</section>
-<section class="detail" id="c:concat_rows/1">
-
-  <div class="detail-header">
-    <a href="#c:concat_rows/1" class="detail-link" title="Link to this callback">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this callback</span>
-    </a>
-    <h1 class="signature" translate="no">concat_rows(list)</h1>
+    <h1 class="signature" translate="no">concat_columns(list, out_df)</h1>
 
       <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/backend/data_frame.ex#L138" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
@@ -1075,7 +1047,35 @@ Callbacks
 
       <div class="specs">
 
-          <pre translate="no"><span class="attribute">@callback</span> concat_rows([<a href="#t:df/0">df</a>()]) :: <a href="#t:df/0">df</a>()</pre>
+          <pre translate="no"><span class="attribute">@callback</span> concat_columns([<a href="#t:df/0">df</a>()], out_df :: <a href="#t:df/0">df</a>()) :: <a href="#t:df/0">df</a>()</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="c:concat_rows/2">
+
+  <div class="detail-header">
+    <a href="#c:concat_rows/2" class="detail-link" title="Link to this callback">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this callback</span>
+    </a>
+    <h1 class="signature" translate="no">concat_rows(list, out_df)</h1>
+
+      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/backend/data_frame.ex#L139" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@callback</span> concat_rows([<a href="#t:df/0">df</a>()], out_df :: <a href="#t:df/0">df</a>()) :: <a href="#t:df/0">df</a>()</pre>
 
       </div>
 
@@ -1143,14 +1143,14 @@ Callbacks
 
   </section>
 </section>
-<section class="detail" id="c:dummies/2">
+<section class="detail" id="c:dummies/3">
 
   <div class="detail-header">
-    <a href="#c:dummies/2" class="detail-link" title="Link to this callback">
+    <a href="#c:dummies/3" class="detail-link" title="Link to this callback">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this callback</span>
     </a>
-    <h1 class="signature" translate="no">dummies(df, columns)</h1>
+    <h1 class="signature" translate="no">dummies(df, out_df, columns)</h1>
 
       <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/backend/data_frame.ex#L105" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
@@ -1164,7 +1164,7 @@ Callbacks
 
       <div class="specs">
 
-          <pre translate="no"><span class="attribute">@callback</span> dummies(<a href="#t:df/0">df</a>(), columns :: [<a href="#t:column_name/0">column_name</a>()]) :: <a href="#t:df/0">df</a>()</pre>
+          <pre translate="no"><span class="attribute">@callback</span> dummies(<a href="#t:df/0">df</a>(), out_df :: <a href="#t:df/0">df</a>(), columns :: [<a href="#t:column_name/0">column_name</a>()]) :: <a href="#t:df/0">df</a>()</pre>
 
       </div>
 
@@ -1522,7 +1522,7 @@ Callbacks
     </a>
     <h1 class="signature" translate="no">join(left, right, out_df, on, how)</h1>
 
-      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/backend/data_frame.ex#L135" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/backend/data_frame.ex#L136" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1698,7 +1698,7 @@ Callbacks
     </a>
     <h1 class="signature" translate="no">pivot_longer(df, out_df, columns_to_pivot, columns_to_keep, names_to, values_to)</h1>
 
-      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/backend/data_frame.ex#L125" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/backend/data_frame.ex#L126" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1724,16 +1724,16 @@ Callbacks
 
   </section>
 </section>
-<section class="detail" id="c:pivot_wider/5">
+<section class="detail" id="c:pivot_wider/6">
 
   <div class="detail-header">
-    <a href="#c:pivot_wider/5" class="detail-link" title="Link to this callback">
+    <a href="#c:pivot_wider/6" class="detail-link" title="Link to this callback">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this callback</span>
     </a>
-    <h1 class="signature" translate="no">pivot_wider(df, id_columns, names_from, values_from, names_prefix)</h1>
+    <h1 class="signature" translate="no">pivot_wider(df, out_df, id_columns, names_from, values_from, names_prefix)</h1>
 
-      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/backend/data_frame.ex#L117" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/backend/data_frame.ex#L118" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1747,6 +1747,7 @@ Callbacks
 
           <pre translate="no"><span class="attribute">@callback</span> pivot_wider(
   <a href="#t:df/0">df</a>(),
+  out_df :: <a href="#t:df/0">df</a>(),
   id_columns :: [<a href="#t:column_name/0">column_name</a>()],
   names_from :: <a href="#t:column_name/0">column_name</a>(),
   values_from :: <a href="#t:column_name/0">column_name</a>(),
@@ -1822,7 +1823,7 @@ Callbacks
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this callback</span>
     </a>
-    <h1 class="signature" translate="no">sample(df, n, replacement, seed)</h1>
+    <h1 class="signature" translate="no">sample(df, n_or_frac, replacement, seed)</h1>
 
       <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/backend/data_frame.ex#L106" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
@@ -1836,7 +1837,7 @@ Callbacks
 
       <div class="specs">
 
-          <pre translate="no"><span class="attribute">@callback</span> sample(<a href="#t:df/0">df</a>(), n :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>(), replacement :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>(), seed :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()) ::
+          <pre translate="no"><span class="attribute">@callback</span> sample(<a href="#t:df/0">df</a>(), n_or_frac :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>(), replacement :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>(), seed :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()) ::
   <a href="#t:df/0">df</a>()</pre>
 
       </div>
@@ -1893,7 +1894,10 @@ Callbacks
 
       <div class="specs">
 
-          <pre translate="no"><span class="attribute">@callback</span> slice(<a href="#t:df/0">df</a>(), indices :: [<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()]) :: <a href="#t:df/0">df</a>()</pre>
+          <pre translate="no"><span class="attribute">@callback</span> slice(
+  <a href="#t:df/0">df</a>(),
+  indices :: [<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()] | %Range{first: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(), last: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(), step: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>()}
+) :: <a href="#t:df/0">df</a>()</pre>
 
       </div>
 
@@ -1937,7 +1941,7 @@ Callbacks
     </a>
     <h1 class="signature" translate="no">summarise_with(df, out_df, aggregations)</h1>
 
-      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/backend/data_frame.ex#L142" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/backend/data_frame.ex#L143" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2226,7 +2230,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">inspect(df, backend, n_rows, inspect_opts, opts \\ [])</h1>
 
-      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/backend/data_frame.ex#L167" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/backend/data_frame.ex#L168" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2248,7 +2252,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">new(data, names, dtypes)</h1>
 
-      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/backend/data_frame.ex#L151" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/backend/data_frame.ex#L152" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>

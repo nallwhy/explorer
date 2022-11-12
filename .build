@@ -8,6 +8,7 @@ Explorer.Backend.html
 Explorer.DataFrame.html
 Explorer.Datasets.html
 Explorer.PolarsBackend.html
+Explorer.Query.html
 Explorer.Series.html
 Explorer.html
 api-reference.html
@@ -38,8 +39,8 @@ dist/merriweather-latin-ext-300-normal-K6L27CZ5.woff2
 dist/merriweather-vietnamese-300-italic-EHHNZPUO.woff2
 dist/merriweather-vietnamese-300-normal-U376L4Z4.woff2
 dist/remixicon-E5UFLALU.woff2
-dist/search_items-BBC181E3.js
-dist/sidebar_items-73D13083.js
+dist/search_items-9D02CB54.js
+dist/sidebar_items-E25FB650.js
 exploring_explorer.html
 index.html
 search.html

@@ -12,7 +12,7 @@
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-X7YVL3G2.js"></script>
-    <script src="dist/sidebar_items-73D13083.js"></script>
+    <script src="dist/sidebar_items-E25FB650.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -110,6 +110,15 @@ Explorer
 </h1>
 
 
+  <section id="moduledoc">
+<p>Datasets used in examples and exploration.</p><p>Note those datasets are not available inside Elixir releases
+(see <a href="https://hexdocs.pm/mix/Mix.Tasks.Release.html"><code class="inline">mix release</code></a>), which is the usual way to deploy Elixir
+in production. Therefore, if you need one of those datasets
+in production, you must download the source files to your
+own application <code class="inline">priv</code> directory and load them yourself.
+For example:</p><pre><code class="makeup elixir" translate="no"><span class="nc">Explorer.DataFrame</span><span class="o">.</span><span class="n">from_csv!</span><span class="p" data-group-id="8898590554-1">(</span><span class="nc">Application</span><span class="o">.</span><span class="n">app_dir</span><span class="p" data-group-id="8898590554-2">(</span><span class="ss">:my_app</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;priv/iris.csv&quot;</span><span class="p" data-group-id="8898590554-2">)</span><span class="p" data-group-id="8898590554-1">)</span></code></pre>
+  </section>
+
 
   <section id="summary" class="details-list">
     <h1 class="section-heading">
@@ -141,8 +150,7 @@ Explorer
 
         </div>
 
-          <div class="summary-synopsis"><p>Iris Dataset - This classic dataset was collected by Edgar Anderson in 1936 and made famous by R. A. Fisher's 1936 paper.
-It consists of several measurements of three species of Iris (Iris setosa, Iris virginica and Iris versicolor).</p></div>
+          <div class="summary-synopsis"><p>Iris Dataset.</p></div>
 
       </div>
 
@@ -152,9 +160,7 @@ It consists of several measurements of three species of Iris (Iris setosa, Iris 
 
         </div>
 
-          <div class="summary-synopsis"><p>Wine Dataset - The data is the result of a chemical analysis of wines grown in the same
-region in Italy but derived from three different cultivars. The analysis determined the quantities
-of 13 constituents found in each of the three types of wines.</p></div>
+          <div class="summary-synopsis"><p>Wine Dataset.</p></div>
 
       </div>
 
@@ -181,7 +187,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">fossil_fuels()</h1>
 
-      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/datasets.ex#L15" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/datasets.ex#L27" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -197,9 +203,9 @@ Functions
   </a>
   Citation
 </h2>
-<p>  Boden, T.A., G. Marland, and R.J. Andres. 2013. Global, Regional, and National Fossil-Fuel CO2
-  Emissions. Carbon Dioxide Information Analysis Center, Oak Ridge National Laboratory, U.S.
-  Department of Energy, Oak Ridge, Tenn., U.S.A. doi 10.3334/CDIAC/00001_V2013</p>
+<pre><code class="makeup elixir" translate="no"><span class="nc">Boden</span><span class="p">,</span><span class="w"> </span><span class="nc">T.A</span><span class="o">.</span><span class="p">,</span><span class="w"> </span><span class="nc">G</span><span class="o">.</span><span class="w"> </span><span class="nc">Marland</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">R.J</span><span class="o">.</span><span class="w"> </span><span class="nc">Andres</span><span class="o">.</span><span class="w"> </span><span class="mi">2013</span><span class="o">.</span><span class="w"> </span><span class="nc">Global</span><span class="p">,</span><span class="w"> </span><span class="nc">Regional</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">National</span><span class="w"> </span><span class="nc">Fossil</span><span class="o">-</span><span class="nc">Fuel</span><span class="w"> </span><span class="nc">CO2</span><span class="w">
+</span><span class="nc">Emissions</span><span class="o">.</span><span class="w"> </span><span class="nc">Carbon</span><span class="w"> </span><span class="nc">Dioxide</span><span class="w"> </span><span class="nc">Information</span><span class="w"> </span><span class="nc">Analysis</span><span class="w"> </span><span class="nc">Center</span><span class="p">,</span><span class="w"> </span><span class="nc">Oak</span><span class="w"> </span><span class="nc">Ridge</span><span class="w"> </span><span class="nc">National</span><span class="w"> </span><span class="nc">Laboratory</span><span class="p">,</span><span class="w"> </span><span class="nc">U.S</span><span class="o">.</span><span class="w">
+</span><span class="nc">Department</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="nc">Energy</span><span class="p">,</span><span class="w"> </span><span class="nc">Oak</span><span class="w"> </span><span class="nc">Ridge</span><span class="p">,</span><span class="w"> </span><span class="nc">Tenn</span><span class="o">.</span><span class="p">,</span><span class="w"> </span><span class="nc">U.S.A</span><span class="o">.</span><span class="w"> </span><span class="n">doi</span><span class="w"> </span><span class="mf">10.3334</span><span class="o">/</span><span class="nc">CDIAC</span><span class="o">/</span><span class="mi">00001</span><span class="c">_V2013</span></code></pre>
   </section>
 </section>
 <section class="detail" id="iris/0">
@@ -211,7 +217,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">iris()</h1>
 
-      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/datasets.ex#L51" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/datasets.ex#L68" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -221,17 +227,20 @@ Functions
 
   <section class="docstring">
 
-<p>Iris Dataset - This classic dataset was collected by Edgar Anderson in 1936 and made famous by R. A. Fisher's 1936 paper.
-It consists of several measurements of three species of Iris (Iris setosa, Iris virginica and Iris versicolor).</p><p>Downloaded and modified from: <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data">https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data</a></p><h2 id="iris/0-citation" class="section-heading">
+<p>Iris Dataset.</p><p>This classic dataset was collected by Edgar Anderson in 1936
+and made famous by R. A. Fisher's 1936 paper. It consists of
+several measurements of three species of Iris (Iris setosa,
+Iris virginica and Iris versicolor).</p><p>Downloaded and modified from: <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data">https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data</a></p><h2 id="iris/0-citation" class="section-heading">
   <a href="#iris/0-citation" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
   <p class="sr-only">citation</p>
   </a>
   Citation
 </h2>
-<p>  Original Owners:
-  R. A. Fisher (1936)
-  The use of multiple measurements in taxonomic problems.
-  Annals of Eugenics. 7 (2): 179–188. doi:10.1111/j.1469-1809.1936.tb02137.x</p><p>  Iris. (1936). UCI Machine Learning Repository.</p>
+<pre><code class="makeup elixir" translate="no"><span class="nc">Original</span><span class="w"> </span><span class="ss">Owners</span><span class="p">:</span><span class="w">
+</span><span class="nc">R</span><span class="o">.</span><span class="w"> </span><span class="nc">A</span><span class="o">.</span><span class="w"> </span><span class="nc">Fisher</span><span class="w"> </span><span class="p" data-group-id="3020187767-1">(</span><span class="mi">1936</span><span class="p" data-group-id="3020187767-1">)</span><span class="w">
+</span><span class="nc">The</span><span class="w"> </span><span class="kn">use</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">multiple</span><span class="w"> </span><span class="n">measurements</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">taxonomic</span><span class="w"> </span><span class="n">problems</span><span class="o">.</span><span class="w">
+</span><span class="nc">Annals</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="nc">Eugenics</span><span class="o">.</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="p" data-group-id="3020187767-2">(</span><span class="mi">2</span><span class="p" data-group-id="3020187767-2">)</span><span class="p">:</span><span class="w"> </span><span class="mi">179</span><span class="err">–</span><span class="mi">188</span><span class="o">.</span><span class="w"> </span><span class="n">doi</span><span class="p">:</span><span class="mf">10.1111</span><span class="o">/</span><span class="n">j</span><span class="o">.</span><span class="mi">1469</span><span class="o">-</span><span class="mf">1809.1936</span><span class="o">.</span><span class="n">tb02137</span><span class="o">.</span><span class="n">x</span><span class="w">
+</span><span class="nc">Iris</span><span class="o">.</span><span class="w"> </span><span class="p" data-group-id="3020187767-3">(</span><span class="mi">1936</span><span class="p" data-group-id="3020187767-3">)</span><span class="o">.</span><span class="w"> </span><span class="nc">UCI</span><span class="w"> </span><span class="nc">Machine</span><span class="w"> </span><span class="nc">Learning</span><span class="w"> </span><span class="nc">Repository</span><span class="o">.</span></code></pre>
   </section>
 </section>
 <section class="detail" id="wine/0">
@@ -243,7 +252,7 @@ It consists of several measurements of three species of Iris (Iris setosa, Iris 
     </a>
     <h1 class="signature" translate="no">wine()</h1>
 
-      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/datasets.ex#L34" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/datasets.ex#L48" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -253,19 +262,21 @@ It consists of several measurements of three species of Iris (Iris setosa, Iris 
 
   <section class="docstring">
 
-<p>Wine Dataset - The data is the result of a chemical analysis of wines grown in the same
-region in Italy but derived from three different cultivars. The analysis determined the quantities
-of 13 constituents found in each of the three types of wines.</p><p>Downloaded and modified from: <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data">https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data</a></p><h2 id="wine/0-citation" class="section-heading">
+<p>Wine Dataset.</p><p>The data is the result of a chemical analysis of wines grown in the same
+region in Italy but derived from three different cultivars. The analysis
+determined the quantities of 13 constituents found in each of the three
+types of wines.</p><p>Downloaded and modified from: <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data">https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data</a></p><h2 id="wine/0-citation" class="section-heading">
   <a href="#wine/0-citation" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
   <p class="sr-only">citation</p>
   </a>
   Citation
 </h2>
-<p>  Original Owners:
-  Forina, M. et al, PARVUS -
-  An Extendible Package for Data Exploration, Classification and Correlation.
-  Institute of Pharmaceutical and Food Analysis and Technologies, Via Brigata Salerno,
-  16147 Genoa, Italy.</p><p>  Wine. (1991). UCI Machine Learning Repository.</p>
+<pre><code class="makeup elixir" translate="no"><span class="nc">Original</span><span class="w"> </span><span class="ss">Owners</span><span class="p">:</span><span class="w">
+</span><span class="nc">Forina</span><span class="p">,</span><span class="w"> </span><span class="nc">M</span><span class="o">.</span><span class="w"> </span><span class="n">et</span><span class="w"> </span><span class="n">al</span><span class="p">,</span><span class="w"> </span><span class="nc">PARVUS</span><span class="w"> </span><span class="o">-</span><span class="w">
+</span><span class="nc">An</span><span class="w"> </span><span class="nc">Extendible</span><span class="w"> </span><span class="nc">Package</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nc">Data</span><span class="w"> </span><span class="nc">Exploration</span><span class="p">,</span><span class="w"> </span><span class="nc">Classification</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">Correlation</span><span class="o">.</span><span class="w">
+</span><span class="nc">Institute</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="nc">Pharmaceutical</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">Food</span><span class="w"> </span><span class="nc">Analysis</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">Technologies</span><span class="p">,</span><span class="w"> </span><span class="nc">Via</span><span class="w"> </span><span class="nc">Brigata</span><span class="w"> </span><span class="nc">Salerno</span><span class="p">,</span><span class="w">
+</span><span class="mi">16147</span><span class="w"> </span><span class="nc">Genoa</span><span class="p">,</span><span class="w"> </span><span class="nc">Italy</span><span class="o">.</span><span class="w">
+</span><span class="nc">Wine</span><span class="o">.</span><span class="w"> </span><span class="p" data-group-id="9083647179-1">(</span><span class="mi">1991</span><span class="p" data-group-id="9083647179-1">)</span><span class="o">.</span><span class="w"> </span><span class="nc">UCI</span><span class="w"> </span><span class="nc">Machine</span><span class="w"> </span><span class="nc">Learning</span><span class="w"> </span><span class="nc">Repository</span><span class="o">.</span></code></pre>
   </section>
 </section>
 
