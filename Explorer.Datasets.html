@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.29.0">
+    <meta name="generator" content="ExDoc v0.29.1">
     <meta name="project" content="Explorer v0.4.0-dev">
 
     <title>Explorer.Datasets — Explorer v0.4.0-dev</title>
-    <link rel="stylesheet" href="dist/html-elixir-2YOS5DIE.css" />
+    <link rel="stylesheet" href="dist/html-elixir-V2ETBPMB.css" />
+
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
-    <script src="dist/handlebars.templates-X7YVL3G2.js"></script>
-    <script src="dist/sidebar_items-1090A1E0.js"></script>
+    <script src="dist/handlebars.templates-IV5W3OL2.js"></script>
+    <script src="dist/sidebar_items-925074B4.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -51,7 +52,7 @@
     </button>
     <label class="search-label">
       <p class="sr-only">Search</p>
-      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
     </label>
   </form>
 
@@ -93,13 +94,13 @@ Explorer
     <div id="content" class="content-inner">
 
 <h1>
-<button class="settings display-settings">
+<button class="icon-action display-settings">
   <i class="ri-settings-3-line"></i>
   <span class="sr-only">Settings</span>
 </button>
 
 
-    <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/datasets.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/datasets.ex#L1" title="View Source" class="icon-action" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
@@ -116,7 +117,7 @@ Explorer
 in production. Therefore, if you need one of those datasets
 in production, you must download the source files to your
 own application <code class="inline">priv</code> directory and load them yourself.
-For example:</p><pre><code class="makeup elixir" translate="no"><span class="nc">Explorer.DataFrame</span><span class="o">.</span><span class="n">from_csv!</span><span class="p" data-group-id="3555770235-1">(</span><span class="nc">Application</span><span class="o">.</span><span class="n">app_dir</span><span class="p" data-group-id="3555770235-2">(</span><span class="ss">:my_app</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;priv/iris.csv&quot;</span><span class="p" data-group-id="3555770235-2">)</span><span class="p" data-group-id="3555770235-1">)</span></code></pre>
+For example:</p><pre><code class="makeup elixir" translate="no"><span class="nc">Explorer.DataFrame</span><span class="o">.</span><span class="n">from_csv!</span><span class="p" data-group-id="1956757917-1">(</span><span class="nc">Application</span><span class="o">.</span><span class="n">app_dir</span><span class="p" data-group-id="1956757917-2">(</span><span class="ss">:my_app</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;priv/iris.csv&quot;</span><span class="p" data-group-id="1956757917-2">)</span><span class="p" data-group-id="1956757917-1">)</span></code></pre>
   </section>
 
 
@@ -128,43 +129,42 @@ For example:</p><pre><code class="makeup elixir" translate="no"><span class="nc"
       </a>
       Summary
     </h1>
+<div class="summary-functions summary">
+  <h2>
+    <a href="#functions">Functions</a>
+  </h2>
 
-  <div class="summary-functions summary">
-    <h2>
-      <a href="#functions">Functions</a>
-    </h2>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#fossil_fuels/0" translate="no">fossil_fuels()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>CO2 emissions from fossil fuels since 2010, by country</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#fossil_fuels/0" translate="no">fossil_fuels()</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#iris/0" translate="no">iris()</a>
+        <div class="summary-synopsis"><p>CO2 emissions from fossil fuels since 2010, by country</p></div>
 
-        </div>
+    </div>
 
-          <div class="summary-synopsis"><p>Iris Dataset.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#wine/0" translate="no">wine()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Wine Dataset.</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#iris/0" translate="no">iris()</a>
 
       </div>
 
-  </div>
+        <div class="summary-synopsis"><p>Iris Dataset.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#wine/0" translate="no">wine()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Wine Dataset.</p></div>
+
+    </div>
+
+</div>
 
   </section>
 
@@ -187,7 +187,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">fossil_fuels()</h1>
 
-      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/datasets.ex#L27" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/datasets.ex#L27" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -217,7 +217,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">iris()</h1>
 
-      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/datasets.ex#L68" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/datasets.ex#L68" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -237,10 +237,10 @@ Iris virginica and Iris versicolor).</p><p>Downloaded and modified from: <a href
   Citation
 </h2>
 <pre><code class="makeup elixir" translate="no"><span class="nc">Original</span><span class="w"> </span><span class="ss">Owners</span><span class="p">:</span><span class="w">
-</span><span class="nc">R</span><span class="o">.</span><span class="w"> </span><span class="nc">A</span><span class="o">.</span><span class="w"> </span><span class="nc">Fisher</span><span class="w"> </span><span class="p" data-group-id="2945699670-1">(</span><span class="mi">1936</span><span class="p" data-group-id="2945699670-1">)</span><span class="w">
+</span><span class="nc">R</span><span class="o">.</span><span class="w"> </span><span class="nc">A</span><span class="o">.</span><span class="w"> </span><span class="nc">Fisher</span><span class="w"> </span><span class="p" data-group-id="5834230104-1">(</span><span class="mi">1936</span><span class="p" data-group-id="5834230104-1">)</span><span class="w">
 </span><span class="nc">The</span><span class="w"> </span><span class="kn">use</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">multiple</span><span class="w"> </span><span class="n">measurements</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">taxonomic</span><span class="w"> </span><span class="n">problems</span><span class="o">.</span><span class="w">
-</span><span class="nc">Annals</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="nc">Eugenics</span><span class="o">.</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="p" data-group-id="2945699670-2">(</span><span class="mi">2</span><span class="p" data-group-id="2945699670-2">)</span><span class="p">:</span><span class="w"> </span><span class="mi">179</span><span class="err">–</span><span class="mi">188</span><span class="o">.</span><span class="w"> </span><span class="n">doi</span><span class="p">:</span><span class="mf">10.1111</span><span class="o">/</span><span class="n">j</span><span class="o">.</span><span class="mi">1469</span><span class="o">-</span><span class="mf">1809.1936</span><span class="o">.</span><span class="n">tb02137</span><span class="o">.</span><span class="n">x</span><span class="w">
-</span><span class="nc">Iris</span><span class="o">.</span><span class="w"> </span><span class="p" data-group-id="2945699670-3">(</span><span class="mi">1936</span><span class="p" data-group-id="2945699670-3">)</span><span class="o">.</span><span class="w"> </span><span class="nc">UCI</span><span class="w"> </span><span class="nc">Machine</span><span class="w"> </span><span class="nc">Learning</span><span class="w"> </span><span class="nc">Repository</span><span class="o">.</span></code></pre>
+</span><span class="nc">Annals</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="nc">Eugenics</span><span class="o">.</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="p" data-group-id="5834230104-2">(</span><span class="mi">2</span><span class="p" data-group-id="5834230104-2">)</span><span class="p">:</span><span class="w"> </span><span class="mi">179</span><span class="err">–</span><span class="mi">188</span><span class="o">.</span><span class="w"> </span><span class="n">doi</span><span class="p">:</span><span class="mf">10.1111</span><span class="o">/</span><span class="n">j</span><span class="o">.</span><span class="mi">1469</span><span class="o">-</span><span class="mf">1809.1936</span><span class="o">.</span><span class="n">tb02137</span><span class="o">.</span><span class="n">x</span><span class="w">
+</span><span class="nc">Iris</span><span class="o">.</span><span class="w"> </span><span class="p" data-group-id="5834230104-3">(</span><span class="mi">1936</span><span class="p" data-group-id="5834230104-3">)</span><span class="o">.</span><span class="w"> </span><span class="nc">UCI</span><span class="w"> </span><span class="nc">Machine</span><span class="w"> </span><span class="nc">Learning</span><span class="w"> </span><span class="nc">Repository</span><span class="o">.</span></code></pre>
   </section>
 </section>
 <section class="detail" id="wine/0">
@@ -252,7 +252,7 @@ Iris virginica and Iris versicolor).</p><p>Downloaded and modified from: <a href
     </a>
     <h1 class="signature" translate="no">wine()</h1>
 
-      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/datasets.ex#L48" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-nx/explorer/blob/v0.4.0-dev/lib/explorer/datasets.ex#L48" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -276,7 +276,7 @@ types of wines.</p><p>Downloaded and modified from: <a href="https://archive.ics
 </span><span class="nc">An</span><span class="w"> </span><span class="nc">Extendible</span><span class="w"> </span><span class="nc">Package</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nc">Data</span><span class="w"> </span><span class="nc">Exploration</span><span class="p">,</span><span class="w"> </span><span class="nc">Classification</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">Correlation</span><span class="o">.</span><span class="w">
 </span><span class="nc">Institute</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="nc">Pharmaceutical</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">Food</span><span class="w"> </span><span class="nc">Analysis</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">Technologies</span><span class="p">,</span><span class="w"> </span><span class="nc">Via</span><span class="w"> </span><span class="nc">Brigata</span><span class="w"> </span><span class="nc">Salerno</span><span class="p">,</span><span class="w">
 </span><span class="mi">16147</span><span class="w"> </span><span class="nc">Genoa</span><span class="p">,</span><span class="w"> </span><span class="nc">Italy</span><span class="o">.</span><span class="w">
-</span><span class="nc">Wine</span><span class="o">.</span><span class="w"> </span><span class="p" data-group-id="2615387565-1">(</span><span class="mi">1991</span><span class="p" data-group-id="2615387565-1">)</span><span class="o">.</span><span class="w"> </span><span class="nc">UCI</span><span class="w"> </span><span class="nc">Machine</span><span class="w"> </span><span class="nc">Learning</span><span class="w"> </span><span class="nc">Repository</span><span class="o">.</span></code></pre>
+</span><span class="nc">Wine</span><span class="o">.</span><span class="w"> </span><span class="p" data-group-id="2692138769-1">(</span><span class="mi">1991</span><span class="p" data-group-id="2692138769-1">)</span><span class="o">.</span><span class="w"> </span><span class="nc">UCI</span><span class="w"> </span><span class="nc">Machine</span><span class="w"> </span><span class="nc">Learning</span><span class="w"> </span><span class="nc">Repository</span><span class="o">.</span></code></pre>
   </section>
 </section>
 
@@ -284,26 +284,32 @@ types of wines.</p><p>Downloaded and modified from: <a href="https://archive.ics
   </section>
 
       <footer class="footer">
-
-          <p>
-            On Hex.pm:
+        <p>
 
             <span class="line">
-              <a href="https://hex.pm/packages/explorer/0.4.0-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/explorer/0.4.0-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/explorer/0.4.0-dev" class="footer-hex-package">Hex Package</a>
 
-                <a href="https://preview.hex.pm/preview/explorer/0.4.0-dev/show/lib/explorer/datasets.ex">(current file)</a>
+              <a href="https://preview.hex.pm/preview/explorer/0.4.0-dev">Hex Preview</a>
+
+                (<a href="https://preview.hex.pm/preview/explorer/0.4.0-dev/show/lib/explorer/datasets.ex">current file</a>)
 
             </span>
 
-            <button class="a-main line footer-button display-quick-switch">
-              Search
+          <span class="line">
+            <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
+              Search HexDocs
             </button>
-          </p>
 
-        <p>
+              <a href="Explorer.epub" title="ePub version">
+                Download ePub version
+              </a>
+
+          </span>
+        </p>
+
+        <p class="built-using">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.0) for the
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.1) for the
 
             <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
 
